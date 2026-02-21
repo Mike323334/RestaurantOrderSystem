@@ -1,0 +1,38 @@
+# Dependencies and builds
+node_modules
+.next
+out
+.turbo
+
+# Env and secrets
+.env
+.env.*
+!.env.example
+
+# Logs and caches
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+.eslintcache
+.parcel-cache
+.vscode-test
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Prisma local files
+prisma/*.db
+prisma/*.db-journal
+prisma/migrations/.DS_Store
+
+# TypeScript
+*.tsbuildinfo
+
+# Next.js image cache
+**/.next/cache
+
+# Generated assets
+/src/generated/prisma

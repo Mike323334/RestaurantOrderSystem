@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-brand-900 bg-white antialiased font-sans;
+  }
+  h1, h2, h3, h4 {
+    @apply font-serif tracking-tight text-brand-800;
+  }
+}
+
+@layer components {
+  .btn-luxury {
+    @apply bg-brand-600 text-white font-medium py-4 px-10 tracking-widest uppercase text-xs
+           hover:bg-brand-700 transition-all duration-500 shadow-lg 
+           active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-brand-600 text-brand-600 font-medium py-4 px-10 tracking-widest uppercase text-xs
+           hover:bg-brand-600 hover:text-white transition-all duration-500 
+           active:scale-[0.98];
+  }
+
+  .card-luxury {
+    @apply bg-white p-8 shadow-elegant border-l-4 border-brand-500 
+           hover:shadow-xl transition-all duration-500;
+  }
+
+  .input-luxury {
+    @apply w-full bg-brand-50 border-b-2 border-brand-200 py-4 px-4
+           focus:border-brand-600 outline-none transition-all 
+           font-medium placeholder:text-brand-300;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-brand-200 rounded-full hover:bg-brand-300;
+  }
+}
