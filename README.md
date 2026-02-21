@@ -9,6 +9,15 @@ Modern pickup ordering flow with PayPal checkout, admin order management, and a 
 - Payments use PayPal Orders API; data persists in PostgreSQL via Prisma.
 - Built with Next.js 16, TypeScript, Tailwind CSS, and animated UI flourishes (Framer Motion).
 
+## Payments (cards via PayPal)
+
+- Card brands available: Visa, Mastercard, American Express, Discover (through PayPal Advanced Credit and Debit Card Payments).
+- Enable ACDC in your PayPal app settings to render card fields (already included via `components: "buttons,card-fields"`).
+- Sandbox test cards:
+  - Visa: `4111111111111111`, any future expiry, any 3-digit CVV
+  - Mastercard: `5555555555554444`, any future expiry, any 3-digit CVV
+  - Amex: `378282246310005`, any future expiry, any 4-digit CVV
+
 ## Prerequisites
 
 - Node.js 18.18+ and npm
